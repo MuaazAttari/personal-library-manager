@@ -28,9 +28,9 @@ This is a command-line application that helps you manage your book collection. Y
 After running the application, you will see a menu with available options. Enter your choice (1-8) and follow the instructions.
 
 * **1. Add a new book:** Follow the prompts to enter the book's details.
-* **2. Remove a book:** Enter the title of the book you want to remove.
+* **2. Remove a book:** Enter the title you want to remove.
 * **3. Search for books:** Enter the search term (title or author).
-* **4. Update book details:** Enter the title of the book you want to edit, and then enter the new details. Leave a field blank to keep the current value.
+* **4. Update book details:** Enter the book title you want to edit, and then enter the new details. Leave a field blank to keep the current value.
 * **5. Mark book as read/unread:** Enter the title of the book to toggle its read status.
 * **6. View all books:** See a list of all books in your library.
 * **7. View reading progress:** View statistics about your library.
@@ -44,10 +44,6 @@ This application saves and loads your library data in a file named `books_data.j
 
 If you'd like to contribute to this project, please feel free to submit pull requests or raise issues.
 
-## License
-
-[You can add your license information here, if you have one.]
-
 ## Author
 
-[You can add your name or username here.]
+✍️ Muhammad Muaaz Ansari | Python learner
