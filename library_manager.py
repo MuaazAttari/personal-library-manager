@@ -35,7 +35,13 @@ class BookCollection:
         print("\n📘 Add a New Book")
         book_title = input("Enter book title: ").strip()
         book_author = input("Enter author: ").strip()
-        publication_year = input("Enter publication year: ").strip()
+        while True:
+            publication_year_str = input("Enter publication year: ").strip()
+            try:
+                publication_year = int(publication_year_str)
+                break
+            except ValueError:
+                print("⚠️ Invalid year. Please enter a number.")
         book_genre = input("Enter genre: ").strip()
         is_book_read = input("Have you read this book? (yes/no): ").strip().lower() == "yes"
 
@@ -93,7 +99,13 @@ class BookCollection:
                 print("\n✏️ Leave blank to keep the current value.")
                 book["title"] = input(f"New title ({book['title']}): ") or book["title"]
                 book["author"] = input(f"New author ({book['author']}): ") or book["author"]
-                book["year"] = input(f"New year ({book['year']}): ") or book["year"]
+                while True:
+                    year_input = input(f"New year ({book['year']}): ") or book["year"]
+                    try:
+                        book["year"] = int(year_input)
+                        break
+                    except ValueError:
+                        print("⚠️ Invalid year. Please enter a number.")
                 book["genre"] = input(f"New genre ({book['genre']}): ") or book["genre"]
 
                 read_input = input("Have you read this book? (yes/no): ").strip().lower()
@@ -146,14 +158,14 @@ class BookCollection:
         """Starts the main menu loop where users choose what they want to do."""
         while True:
             print("\n📚📖 ===== Book Collection Manager Menu ===== 📖📚")
-            print("1️⃣  Add a new book")
-            print("2️⃣  Remove a book")
-            print("3️⃣  Search for books")
-            print("4️⃣  Update book details")
-            print("5️⃣  Mark book as read/unread")
-            print("6️⃣  View all books")
-            print("7️⃣  View reading progress")
-            print("8️⃣  Exit the program")
+            print("1️⃣  Add a new book")
+            print("2️⃣  Remove a book")
+            print("3️⃣  Search for books")
+            print("4️⃣  Update book details")
+            print("5️⃣  Mark book as read/unread")
+            print("6️⃣  View all books")
+            print("7️⃣  View reading progress")
+            print("8️⃣  Exit the program")
 
             user_choice = input("👉 Please choose an option (1-8): ")
 
